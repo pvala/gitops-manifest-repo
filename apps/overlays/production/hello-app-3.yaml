@@ -3,18 +3,10 @@ kind: Application
 metadata:
   name: hello-app-3
   namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
   source:
-    repoURL: https://github.com/pvala/gitops-manifest-repo.git
     targetRevision: HEAD
-    path: hello-app-3/base
+    path: hello-app-3/overlays/production
   destination:
     server: https://kubernetes.default.svc
     namespace: production
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
