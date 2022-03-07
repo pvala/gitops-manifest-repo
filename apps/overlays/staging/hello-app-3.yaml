@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-app-3
+  namespace: argocd
+spec:
+  source:
+    targetRevision: HEAD
+    path: hello-app-3/overlays/staging
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: staging
