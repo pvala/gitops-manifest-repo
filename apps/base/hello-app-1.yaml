@@ -2,18 +2,18 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: hello-app-1
-  namespace: hello-app-1
+  namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
     repoURL: https://github.com/pvala/gitops-manifest-repo.git
-    targetRevision: release
+    targetRevision: HEAD
     path: hello-app-1
   destination:
     server: https://kubernetes.default.svc
-    namespace: hello-app-1
+    namespace: default
   syncPolicy:
     automated:
       prune: true
