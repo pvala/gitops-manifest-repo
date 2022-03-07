@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: hello-app-2
-          image: pedrovala/minimalapi:v1
+          image: pedrovala/minimalapi:2.0.1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
