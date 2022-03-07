@@ -5,3 +5,4 @@ resources:
   - ../../base
 patchesStrategicMerge:
   - hello-app-2.yaml
+  - hello-app-3.yaml
