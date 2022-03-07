@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: hello-app-2
-          image: pedrovala/minimalapi:2.0.1
+          image: pedrovala/minimalapi:v1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
@@ -26,7 +26,7 @@ spec:
             - name: ASPNETCORE_URLS
               value: http://+:80
             - name: "ASPNETCORE_ENVIRONMENT"
-              value: "Staging"    
+              value: "Production"    
 ---
 apiVersion: v1
 kind: Service
