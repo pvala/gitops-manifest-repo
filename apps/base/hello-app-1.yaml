@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: hello-app-1
-  namespace: default
+  namespace: hello-app-1
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -13,7 +13,7 @@ spec:
     path: hello-app-1
   destination:
     server: https://kubernetes.default.svc
-    namespace: kube-system
+    namespace: hello-app-1
   syncPolicy:
     automated:
       prune: true
