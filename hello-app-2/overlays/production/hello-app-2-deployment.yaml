@@ -28,7 +28,7 @@ spec:
             - name: "ASPNETCORE_ENVIRONMENT"
               value: "Production"
             - name: "Custom__Topic"
-              value: "TopicoInjectado"    
+              value: "UmaCenaQualquer"    
 ---
 apiVersion: v1
 kind: Service
